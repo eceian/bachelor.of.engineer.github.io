@@ -26,7 +26,7 @@ const products = [
     { id: 19, name: "IR Receiver with Remote", price: 70, category: "sensors", description: "IR receiver + remote control", image: "image/ir_receiver.png.png" },
     { id: 20, name: "MPU6050", price: 250, category: "sensors", description: "6-axis gyroscope & accelerometer", image: "images/mpu6050.png" },
     { id: 21, name: "PIR Sensor", price: 100, category: "sensors", description: "Motion detection sensor", image: "images/pir.png" },
-    { id: 22, name: "Eye Blink Sensor", price: 200, category: "sensors", description: "Eye blink detection module", image: "image/eyeBlink.png" },
+    { id: 22, name: "Eye Blink Sensor", price: 200, category: "sensors", description: "Eye blink detection module", image: "image/eyeblink.png" },
     { id: 23, name: "Voltage Sensor", price: 170, category: "sensors", description: "DC voltage measurement module", image: "images/voltagesensor (1).png" },
     { id: 24, name: "Current Sensor", price: 150, category: "sensors", description: "ACS712 current sensor", image: "image/current.png" },
     
