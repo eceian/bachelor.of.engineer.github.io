@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachelor of Engineer - Electronics Components Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <h1 class="logo">BACHELOR OF ENGINEER</h1>
+                    <p class="tagline">A Student Mind Set</p>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#project-enquiry" class="nav-link">Project Enquiry</a>
+                    <a href="#customize-pcb" class="nav-link">Customize PCB</a>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Cart <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#products" onclick="closeMobileMenu()">Products</a>
+            <a href="#project-enquiry" onclick="closeMobileMenu()">Project Enquiry</a>
+            <a href="#customize-pcb" onclick="closeMobileMenu()">Customize PCB</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+            <a href="#feedback" onclick="closeMobileMenu()">Feedback</a>
+            <a href="javascript:void(0)" onclick="toggleCart(); closeMobileMenu();" class="mobile-cart-link">
+                <i class="fas fa-shopping-cart"></i> Cart (<span class="mobile-cart-count">0</span>)
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Power Your Projects</h2>
+                <p class="hero-subtitle">Premium Electronic Components for Engineering Students</p>
+                <a href="#products" class="cta-btn">
+                    Explore Products
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="sensors">Sensors</button>
+                <button class="filter-btn" data-category="microcontrollers">Microcontrollers</button>
+                <button class="filter-btn" data-category="displays">Displays</button>
+                <button class="filter-btn" data-category="boards">Boards</button>
+                <button class="filter-btn" data-category="modules">Modules</button>
+                <button class="filter-btn" data-category="batteries">Batteries</button>
+                <button class="filter-btn" data-category="bluetooth">Bluetooth</button>
+                <button class="filter-btn" data-category="others">Other Modules</button>
+                <button class="filter-btn" data-category="exclusive">Exclusive</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Enquiry Section -->
+    <section id="project-enquiry" class="project-enquiry-section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2 class="project-title">Need Help with Your Project?</h2>
+                <p class="project-description">
+                    If you have to make project, just follow and DM to this Instagram account 
+                    <a href="https://instagram.com/bachelor.of.engineer" target="_blank" class="instagram-link">
+                        @bachelor.of.engineer
+                    </a>
+                    <br>Our technical team will contact you!
+                </p>
+                <a href="https://instagram.com/bachelor.of.engineer" target="_blank" class="instagram-btn">
+                    <i class="fab fa-instagram"></i>
+                    Contact Technical Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customize PCB Section -->
+    <section id="customize-pcb" class="customize-pcb-section">
+        <div class="container">
+            <div class="pcb-content">
+                <div class="pcb-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h2 class="pcb-title">Customize Your PCB</h2>
+                <p class="pcb-description">
+                    Need a custom PCB for your project? We offer professional PCB design and fabrication services.
+                    <br>Send us your requirements and our experts will help you create the perfect board.
+                </p>
+                <div class="pcb-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Professional Design</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Fast Turnaround</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Quality Assured</span>
+                    </div>
+                </div>
+                <a href="https://instagram.com/bachelor.of.engineer" target="_blank" class="pcb-btn">
+                    <i class="fab fa-instagram"></i>
+                    Request Custom PCB
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>sureshsuresk807@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@bachelor.of.engineer</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>How to Order</h3>
+                    <p>Add to cart & send screenshot to Instagram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback-section">
+        <div class="container">
+            <h2 class="section-title">Feedback</h2>
+            <p class="feedback-quote">"Any improvements in this website? Give feedback"</p>
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your feedback..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Feedback
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-shopping-bag"></i>
+                Buy Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Buy Modal -->
+    <div class="modal" id="buyModal">
+        <div class="modal-overlay" onclick="closeBuyModal()"></div>
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBuyModal()">&times;</span>
+            <div class="modal-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <h2>Complete Your Order</h2>
+            <div class="modal-message">
+                <p>You need to buy a product. Just take a screenshot of your cart and send it to our Instagram page <strong>@bachelor.of.engineer</strong> along with your mobile number. Our production team will contact you shortly.</p>
+            </div>
+            <a href="https://instagram.com/bachelor.of.engineer" target="_blank" class="instagram-order-btn" onclick="closeBuyModal()">
+                <i class="fab fa-instagram"></i>
+                Open Instagram
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BACHELOR OF ENGINEER</h3>
+                    <p>A Student Mind Set</p>
+                    <p class="footer-description">Your trusted source for quality electronic components</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#products">Products</a>
+                    <a href="#project-enquiry">Project Enquiry</a>
+                    <a href="#customize-pcb">Customize PCB</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#feedback">Feedback</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <a href="https://instagram.com/bachelor.of.engineer" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="mailto:sureshsuresk807@gmail.com">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bachelor of Engineer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay for cart -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
