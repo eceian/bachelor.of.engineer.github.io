@@ -2,7 +2,7 @@
 const products = [
     // SENSORS
     { id: 1, name: "Thermistor", 
-        price: 80, category: "sensors", 
+        price: 10, category: "sensors", 
         description: "Temperature sensitive resistor", 
         image: "images/thermistor.png.png " },
         
